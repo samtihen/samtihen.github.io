@@ -1,3 +1,36 @@
-baseURL = 'http://samtihen.com/'
+baseURL = 'http://www.samtihen.com/'
 languageCode = 'en-us'
-title = 'Information about Sam Tihen'
+title = 'Sam Tihen'
+theme = "m10c"
+paginate = 8
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "work"
+    name = "Work"
+    url = "/work/"
+    weight = 2
+  [[menu.main]]
+    identifier = "Family"
+    name = "Family"
+    url = "/family/"
+    weight = 5
+
+[params]
+  author = "Sam Tihen"
+  avatar = "images/samtihen.jpg"
+  description = " "
+  menu_item_separator = " - "
+  [[params.social]]
+    icon = "github"
+    name = "Github"
+    url = "https://github.com/samtihen"
+  [[params.social]]
+    icon = "linkedin"
+    name = "Linkedin"
+    url = "https://www.linkedin.com/in/samtihen/"
