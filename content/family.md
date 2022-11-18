@@ -4,8 +4,6 @@ date: 2022-11-18T15:22:34-06:00
 draft: true
 ---
 
-# Family
-
 I am fortunate to be part of an amazing family of four - myself, my wife Christina, and my children Jack and Max. I knew Christina growing up, but she only agreed to marry me after I had matured for an extra decade or so 🤣.  She is a very smart, kind, and exceptionally beautiful woman and I'm incredibly lucky to have her!
 
 My first born, Jack, is 5 years old and is a very clever, fun loving preschooler. He particularly enjoys dinosaurs and werewolves.
