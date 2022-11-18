@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sam Tihen</title>
+    <link>http://www.samtihen.com/</link>
+    <description>Recent content on Sam Tihen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Nov 2022 15:14:31 -0600</lastBuildDate><atom:link href="http://www.samtihen.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Work</title>
+      <link>http://www.samtihen.com/work/</link>
+      <pubDate>Fri, 18 Nov 2022 15:28:12 -0600</pubDate>
+      
+      <guid>http://www.samtihen.com/work/</guid>
+      <description>I have worked as a software engineer since 2004, and have spent most of that time building web applications using a wide variety of programming languages.
+I currently work at Enterprise Holdings, where I lead the development of solutions across our Commute, Carshare, and Zimride teams. At EHI, we generally create highly scaleable Java and PHP applications and deploy on AWS intrastructure.
+I also run a small software company called Nehit that engages in occasional web application development on a per project basis.</description>
+    </item>
+    
+    <item>
+      <title>Family</title>
+      <link>http://www.samtihen.com/family/</link>
+      <pubDate>Fri, 18 Nov 2022 15:22:34 -0600</pubDate>
+      
+      <guid>http://www.samtihen.com/family/</guid>
+      <description>I am fortunate to be part of an amazing family of four - myself, my wife Christina, and my children Jack and Max. I knew Christina growing up, but she only agreed to marry me after I had matured for an extra decade or so 🤣. She is a very smart, kind, and exceptionally beautiful woman and I&amp;rsquo;m incredibly lucky to have her!
+My first born, Jack, is 5 years old and is a very clever, fun loving preschooler.</description>
+    </item>
+    
+  </channel>
+</rss>
