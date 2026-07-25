@@ -224,7 +224,7 @@ img { display: block; max-width: 100%; }
 
 .portrait-note {
   position: absolute;
-  right: -1.5rem;
+  right: 0.75rem;
   bottom: 1.4rem;
   display: flex;
   align-items: center;
@@ -441,7 +441,7 @@ img { display: block; max-width: 100%; }
   font-size: 1.1rem;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 980px) {
   .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 0; }
   .portrait-wrap { width: 100%; max-width: 430px; justify-self: start; }
   .home-story, .page-header { grid-template-columns: 1fr; }
@@ -453,7 +453,7 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 560px) {
-  .site-shell { width: calc(100% - 1.3rem); }
+  .site-shell { width: calc(100% - 2rem); }
   .site-header { min-height: 84px; }
   .brand-name { display: none; }
   .site-nav { gap: 0; }
@@ -461,9 +461,13 @@ img { display: block; max-width: 100%; }
   .hero { gap: 4rem; padding: 4rem 0 5rem; }
   .hero h1 { font-size: clamp(3.1rem, 16vw, 4.4rem); }
   .hero-actions { align-items: stretch; flex-direction: column; }
-  .portrait-note { right: 0.7rem; bottom: 0.7rem; }
+  .portrait-note {
+    position: static;
+    width: fit-content;
+    margin: 1rem auto 0;
+  }
   .home-story { padding: 5rem 0; }
-  .highlight-card { padding: 2rem 1rem; }
+  .highlight-card { padding: 2rem 0; }
   .page { padding-top: 4rem; }
   .page-next, .site-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 1rem; }
 }
