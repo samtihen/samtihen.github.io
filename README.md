@@ -4,7 +4,7 @@ This is a personal site built using [Hugo](https://gohugo.io/), a static site ge
 
 The content is written in Markdown, and stored in the "content" folder.
 
-The theme is called [m10c](https://github.com/vaga/hugo-theme-m10c), and was added as a git submodule to the "themes" directory.
+The site uses custom Hugo templates and modern CSS with no JavaScript.
 
 ## Build and deploy
 

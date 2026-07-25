@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <article class="page">
+    <header class="page-header">
+      <p class="eyebrow"><span></span> {{ if eq .Title "Work" }}Career & craft{{ else if eq .Title "Family" }}The people who matter most{{ else }}Sam Tihen{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="page-lede">{{ if eq .Title "Work" }}More than two decades of building web applications, leading teams, and helping ideas become useful software.{{ else if eq .Title "Family" }}Life away from the keyboard with Christina, Jack, and Max.{{ end }}</p>
+    </header>
+    <div class="page-content">
+      {{ .Content }}
+    </div>
+    <nav class="page-next" aria-label="Continue exploring">
+      {{ if eq .Title "Work" }}
+        <span>Beyond the work</span>
+        <a href="{{ "/family/" | relURL }}">Meet my family <span aria-hidden="true">→</span></a>
+      {{ else }}
+        <span>Back to the beginning</span>
+        <a href="{{ "/" | relURL }}">Return home <span aria-hidden="true">→</span></a>
+      {{ end }}
+    </nav>
+  </article>
+{{ end }}

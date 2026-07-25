@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <section class="archive-page">
+    <header class="archive-header">
+      <p class="eyebrow"><span></span> Browse</p>
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ if .Data.Terms }}
+      <div class="archive-list">
+        {{ range .Data.Terms.Alphabetical }}
+          <a class="archive-item" href="{{ .Page.RelPermalink }}">
+            <span>{{ .Page.Title }}</span>
+            <span>{{ .Count }}</span>
+          </a>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="empty-state">Nothing here yet.</p>
+    {{ end }}
+  </section>
+{{ end }}

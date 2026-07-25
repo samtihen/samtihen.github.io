@@ -1,48 +1,45 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.Language.Locale | default "en-US" }}">
   <head>
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} // {{ .Site.Title }}{{ end }}</title>
-    <link rel="shortcut icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}" />
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }} — Software Engineer & Educator{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Sam Tihen is a software engineer, technical leader, and educator based in St. Louis.{{ end }}">
+    <meta name="theme-color" content="#0a1016">
     {{ hugo.Generator }}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="{{ .Site.Params.author | default "John Doe" }}" />
-    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
-    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | css.Sass | minify | fingerprint -}}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-
-    {{ template "_internal/google_analytics.html" . }}
+    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | css.Sass | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
-
   </head>
   <body>
-    <header class="app-header">
-      <a href="{{ .Site.BaseURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
-      <span class="app-header-title">{{ .Site.Title }}</span>
-      {{- with .Site.Menus.main }}
-      <nav class="app-header-menu">
-        {{- range $key, $item := . }}
-          {{- if ne $key 0 }}
-            {{ $.Site.Params.menu_item_separator | default " - " | safeHTML }}
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="{{ "/" | relURL }}" aria-label="Sam Tihen, home">
+          <span class="brand-mark" aria-hidden="true">ST</span>
+          <span class="brand-name">Sam Tihen</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
           {{ end }}
-          <a class="app-header-menu-item" href="{{ $item.URL }}">{{ $item.Name }}</a>
-        {{- end }}
-      </nav>
-      {{- end }}
-      <p>{{ .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." }}</p>
-      {{- with .Site.Params.social }}
-      <div class="app-header-social">
-        {{ range . }}
-          <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
-            {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .name) }}
-          </a>
-        {{ end }}
-      </div>
-      {{- end }}
-    </header>
-    <main class="app-container">
-      {{ .Content }}
-    </main>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        {{ block "main" . }}{{ end }}
+      </main>
+
+      <footer class="site-footer">
+        <p>Built with care in St. Louis.</p>
+        <div class="footer-links">
+          {{ range .Site.Params.social }}
+            <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">{{ .name }} <span aria-hidden="true">↗</span></a>
+          {{ end }}
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

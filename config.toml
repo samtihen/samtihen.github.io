@@ -1,7 +1,6 @@
 baseURL = 'http://www.samtihen.com/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'Sam Tihen'
-theme = "m10c"
 paginate = 8
 
 [menu]

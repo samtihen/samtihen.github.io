@@ -1,0 +1,56 @@
+{{ define "main" }}
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> Software engineer · Educator · Mentor</p>
+      <h1>Hi, I’m Sam.<br><em>I build things</em> for the web.</h1>
+      <p class="hero-intro">I lead software teams, create thoughtful digital products, and help the next generation of developers find their footing.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ "/work/" | relURL }}">See what I do <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="https://www.linkedin.com/in/samtihen/" target="_blank" rel="noreferrer noopener">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <div class="portrait-frame">
+        <img src="{{ .Site.Params.avatar | relURL }}" alt="Sam Tihen" width="683" height="683">
+      </div>
+      <div class="portrait-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Building software since 2004</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-story" aria-label="About Sam">
+    <div class="section-heading">
+      <p class="eyebrow"><span></span> A little more</p>
+      <h2>Code is only part of the story.</h2>
+    </div>
+    <div class="story-copy">
+      {{ .Content }}
+    </div>
+  </section>
+
+  <section class="highlights" aria-label="Highlights">
+    <article class="highlight-card">
+      <span class="card-number">01</span>
+      <p class="card-kicker">Leadership</p>
+      <h2>Enterprise software</h2>
+      <p>Leading teams and building scalable web applications at Enterprise Mobility since 2015.</p>
+      <a href="{{ "/work/" | relURL }}">Explore my work <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="highlight-card">
+      <span class="card-number">02</span>
+      <p class="card-kicker">Teaching</p>
+      <h2>Web development</h2>
+      <p>Teaching CSE 2004 and mentoring emerging developers at Washington University in St. Louis.</p>
+      <a href="https://github.com/wustlcse204" target="_blank" rel="noreferrer noopener">Visit the course <span aria-hidden="true">↗</span></a>
+    </article>
+    <article class="highlight-card">
+      <span class="card-number">03</span>
+      <p class="card-kicker">Life</p>
+      <h2>Family & adventure</h2>
+      <p>Husband, dad, traveler, and former scuba startup founder—with plenty of stories from along the way.</p>
+      <a href="{{ "/family/" | relURL }}">Meet the family <span aria-hidden="true">→</span></a>
+    </article>
+  </section>
+{{ end }}
