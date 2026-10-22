@@ -192,7 +192,8 @@ img { display: block; max-width: 100%; }
 
 .portrait-wrap {
   position: relative;
-  max-width: 430px;
+  width: 100%;
+  max-width: 410px;
   justify-self: end;
 }
 
@@ -217,14 +218,15 @@ img { display: block; max-width: 100%; }
 
 .portrait-frame img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   border-radius: 43% 43% 21px 21px;
   object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .portrait-note {
   position: absolute;
-  right: 0.75rem;
+  left: 50%;
   bottom: 1.4rem;
   display: flex;
   align-items: center;
@@ -238,6 +240,8 @@ img { display: block; max-width: 100%; }
   backdrop-filter: blur(12px);
   font-size: 0.78rem;
   font-weight: 650;
+  white-space: nowrap;
+  transform: translateX(-50%);
 }
 
 .status-dot {
@@ -443,7 +447,7 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 980px) {
   .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 0; }
-  .portrait-wrap { width: 100%; max-width: 430px; justify-self: start; }
+  .portrait-wrap { width: 100%; max-width: 410px; justify-self: center; }
   .home-story, .page-header { grid-template-columns: 1fr; }
   .page-header .eyebrow { margin-bottom: 0; }
   .highlights { grid-template-columns: 1fr; }
@@ -465,6 +469,7 @@ img { display: block; max-width: 100%; }
     position: static;
     width: fit-content;
     margin: 1rem auto 0;
+    transform: none;
   }
   .home-story { padding: 5rem 0; }
   .highlight-card { padding: 2rem 0; }
